@@ -1,4 +1,4 @@
-codeshares
+Spotify
 ==========
 Created by Daniel Counahan AKA Strider
 
@@ -7,52 +7,13 @@ Instructions on how to use this module:
 
 1) Upload the files into their correct locations.
 
-2) In phpmyadmin import the phpvms_strider.sql file into your database where the main phpvms is located.
+2) In phpmyadmin import the phpvms_spotify.sql file into your database where the main phpvms is located.
 
-3)You will need to add "codeshare and codenum to the schedules table.
+3)You will need to edit line 64 in SpotifyData.class.php file to get the copyright to show if you do not have the codeshare module installed.
 
-4) Insert the airlines into the airlines db using the add airline in the module
+4) You will need to get the playlist code by going to the playlist you created, clicking on the 3 dots beside the play button and going to share and clicking on copy spotify uri. Paste it in a blank text document and copy the last part of it after the :.
+5) You can change the width, height and if it has a border or not, default values are suggested. For the border value it is either a 1 or a 0.
 
-5) Insert all codeshare flights into your schedules using the add codeshare form within the module admin side.
-
-6) Use the dropdown to select the airline of the codeshare flight and fill out t he rest of the form. By default it will set the schedule to run 7 days aa week. This will be updated in future updates.
-
-7) Add your airlines flight number designated for codeshare flights.
-
-8) To use the images create a folder within your lib/skins/skinname/images folder called logo's.
-
-9) You will need to edit the following files:
-replace all references to SKIN NAME HERE with the name of your skin in the following files:
-core/templates/codeshare/Codeshare.php
-core/templates/codeshare/airline/Airlines.php
-core/templates/codeshare/airline/Airlineview.php
-admin/templates/codeshare/codeshare_index.php
-admin/templates/codeshare/codeshares_codeshare.php
-admin/templates/codeshare/airline/airline_index.php
-admin/templates/codeshare/airline/airlines_airline.php
-
-10) Add the file logos with the logos in it to the images folder within the skin folder. (Images should be 109x39px)
-
-11)Add the following to the airlines table:
-codeshare tinyint(1) NULL
-airdesc varchar(350) NULL
-type varchar(1) NULL
-
-12)For your other airlines add a 0 to the codeshare column so the bellow code will work.
-
-Edit your registration main form and add the following to where it is looking for to choose an airline:
-	<?php foreach($airline_list as $airline) {
-				if($airline->codeshare == "0"){
-				echo '<option value="'.$airline->code.'">'.$airline->code.' - '.$airline->name.'</option>';
-			}
-
-			}?>
-I have included the form if you have not styled it. That code will make it so only your main airline/s are the ones that can be chosen to join as.
-
-13) Add the following columns to the schedules table:
-codeshare tinyint 1 NULL
-codenum varchar 10 NULL
-dateadded datetime NULL
 
 
 Licence
