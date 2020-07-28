@@ -1,0 +1,12 @@
+`phpvms_spotify`*sql
+../admin/modules/Spotify_admin/Spotify_admin.php
+../admin/templates/spotify/spotify_edit_form.php
+../admin/templates/spotify/spotify_header.php
+../admin/templates/spotify/spotify_index.php
+../admin/templates/spotify/spotify_new_form.php
+../admin/templates/spotify/sidebar_spotify.php
+../admin/templates/spotify/spotifys_spotify.php
+../core/common/SpotifyData.class.php
+../core/modules/Spotify/Spotify.php
+../core/templates/spotify/Spotify.php
+
